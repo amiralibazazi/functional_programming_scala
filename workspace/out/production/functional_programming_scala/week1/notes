@@ -1,0 +1,22 @@
+Values declared in a block are only visible inside that block.
+values outside of a block are visible inside of a block,
+unless they are shadows by a value of the same name inside the block.
+
+
+
+The following is interpreted by the scala compiler as two separate expressions:
+    someLongExpression
+        + someOtherExpression
+
+The solution:
+
+    (someLongExpression
+        + someOtherExpression)
+
+Or
+    someLongExpression +
+        someOtherExpression
+
+
+gcd() calls itself as it's last action, therefore it is tail recursive.
+factorial() is not tail recursive as after the call to factorial(n-1), there was still work to be done.
